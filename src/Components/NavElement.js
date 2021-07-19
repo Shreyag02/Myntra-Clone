@@ -5,7 +5,7 @@ export default class NavElement extends Component {
     return (
         <a
         href="#"
-        className="hover:text-gray-700 hover:border-pink-500 border-b-4 text-gray-400 border-transparent block px-3 py-2 text-lg font-medium"
+        className="uppercase hover:text-gray-700 hover:border-pink-500 border-b-2 text-gray-400 border-transparent block px-3 py-2 text-base font-medium"
       >
         {this.props.title}
       </a>
