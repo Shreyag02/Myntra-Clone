@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
 import logo from '../Assets/myntra-logo.svg'
 import NavElement from './NavElement';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHeart, faUser} from '@fortawesome/free-regular-svg-icons'
+import {faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 class Navbar extends Component {
   render() {
     return (
         <nav className="">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 mynav">
+          <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img
-                  className="h-8 w-8"
+                  className="h-14 w-14"
                   src={logo}
                   alt="Myntra"
                 />
@@ -25,7 +28,15 @@ class Navbar extends Component {
                 </div>
               </div>
             </div>
+            <div className="flex items-right">
+            <div className="ml-10 flex items-baseline space-x-4">
+                <FontAwesomeIcon icon={faUser} />
+                <FontAwesomeIcon icon={faHeart} />
+                <FontAwesomeIcon icon={faShoppingBag} />
+            </div>
             
+            </div>
+
             {/* <div className="-mr-2 flex md:hidden">
               <button
                 type="button"

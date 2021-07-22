@@ -1,0 +1,38 @@
+[
+    {
+        "id": "001",
+        "brand": "Peter England",
+        "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hpcnRzfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Upto 50% OFF",
+        "item":"On Shirts"
+    },
+    {
+        "id": "002",
+        "brand": "HRX",
+        "image": "https://images.unsplash.com/photo-1618259181324-86a49fe68099?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YWN0aXZld2VhcnxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "30%-50% OFF",
+        "item":"On Kids and Activewear"
+    },
+    {
+        "id": "003",
+        "brand": "Phillips",
+        "image": "https://images.unsplash.com/photo-1621607510248-9c78bbab941b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhhaXIlMjBhcHBsaWFuY2VzfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Min 50% OFF",
+        "item":"On Appliances"
+    },
+    {
+        "id": "004",
+        "brand": "Roadster",
+        "image": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFudHN8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Upto 70% OFF",
+        "item":"On bottomwear"
+    },
+    {
+        "id": "005",
+        "brand": "Trendy Styles",
+        "image": "https://images.unsplash.com/photo-1574271143515-5cddf8da19be?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aGFuZGJhZ3N8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Flat 50% OFF",
+        "item":"On HandBags and Wallets"
+    }
+
+]

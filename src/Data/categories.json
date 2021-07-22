@@ -1,0 +1,71 @@
+[
+    {
+        "id": "001",
+        "name": "Shirts",
+        "image": "https://images.unsplash.com/photo-1602810320073-1230c46d89d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2hpcnRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    },
+    {
+        "id": "002",
+        "name": "T-shirts",
+        "image": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHNoaXJ0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+        "id": "003",
+        "name": "Jeans",
+        "image": "https://images.unsplash.com/photo-1584382296103-92ddc0921fa0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGplYW5zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+        "id": "004",
+        "name": "Shorts & Trousers",
+        "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHNob3J0cyUyMGFuZCUyMHRyb3VzZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    },
+    {
+        "id": "005",
+        "name": "Casual Shoes",
+        "image": "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhc3VhbCUyMHNob2VzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    },
+    {
+        "id": "006",
+        "name": "Handbags",
+        "image": "https://images.unsplash.com/photo-1591561954557-26941169b49e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGFuZGJhZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+        "id": "007",
+        "name": "Infant Essentials",
+        "image": "https://images.unsplash.com/photo-1470843810958-2da815d0e041?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGluZmFudCUyMGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    },
+    {
+        "id": "008",
+        "name": "Kurta Sets",
+        "image": "https://images.unsplash.com/photo-1622780432053-767528938f34?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8a3VydGElMjBzZXRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    },
+    {
+        "id": "009",
+        "name": "Sarees",
+        "image": "https://images.unsplash.com/photo-1616986491129-3e37cb654c82?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FyZWVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+        "id": "010",
+        "name": "Dresses",
+        "image": "https://images.unsplash.com/photo-1567966456076-905a50a06d8c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJlc3Nlc3xlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    },
+    {
+        "id": "011",
+        "name": "Flats & Heels ",
+        "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwYXJlbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    },
+    {
+        "id": "012",
+        "name": "Shorts",
+        "image": "https://images.unsplash.com/photo-1617952236317-0bd127407984?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fHNob3J0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+
+    }
+
+]

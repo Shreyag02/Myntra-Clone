@@ -1,0 +1,63 @@
+[
+    {
+        "id": "001",
+        "brand": "VERO MODA",
+        "image": "https://images.unsplash.com/photo-1467043237213-65f2da53396f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+        "disc": "Upto 50% OFF"
+    },
+    {
+        "id": "002",
+        "brand": "FOREVER 21",
+        "image": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80",
+        "disc": "30%-50% OFF"
+    },
+    {
+        "id": "003",
+        "brand": "PUMA",
+        "image": "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Min 50% OFF"
+    },
+    {
+        "id": "004",
+        "brand": "TOMMY HIGHFLIER",
+        "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNsb3RoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "disc": "Upto 70% OFF"
+    },
+    {
+        "id": "005",
+        "brand": "FABALLY",
+        "image": "https://images.unsplash.com/photo-1509319117193-57bab727e09d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGNsb3RoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+        "disc": "Flat 50% OFF"
+    },
+    {
+        "id": "006",
+        "brand": "LEVIS",
+        "image": "https://images.unsplash.com/photo-1604176354204-9268737828e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Min 50% OFF"
+    },
+    {
+        "id": "007",
+        "brand": "DRESSBERRY",
+        "image": "https://images.unsplash.com/photo-1453486030486-0a5ffcd82cd9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Upto 20% OFF"
+    },
+    {
+        "id": "008",
+        "brand": "PUMA",
+        "image": "https://images.unsplash.com/photo-1603252109303-2751441dd157?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Flat 50% OFF"
+    },
+    {
+        "id": "009",
+        "brand": "ADIDAS",
+        "image": "https://images.unsplash.com/photo-1599839614778-a0ee8a16f2a9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzR8fGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "30-50% OFF"
+    },
+    {
+        "id": "010",
+        "brand": "MANGO",
+        "image": "https://images.unsplash.com/photo-1542825735-273f6f8eda1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "disc": "Flat 30% OFF"
+    }
+
+]
