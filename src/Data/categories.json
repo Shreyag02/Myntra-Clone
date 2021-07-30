@@ -17,7 +17,7 @@
     },
     {
         "id": "004",
-        "name": "Shorts & Trousers",
+        "name": "Trousers",
         "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHNob3J0cyUyMGFuZCUyMHRyb3VzZXJzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 
     },
@@ -34,7 +34,7 @@
     },
     {
         "id": "007",
-        "name": "Infant Essentials",
+        "name": "Baby Care",
         "image": "https://images.unsplash.com/photo-1470843810958-2da815d0e041?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGluZmFudCUyMGNsb3RoZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
 
     },

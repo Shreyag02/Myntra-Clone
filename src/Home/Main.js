@@ -20,7 +20,7 @@ export default class Main extends Component {
         <div className="w-10/12 mx-auto ">
         <h1 className="font-bold text-gray-700 text-4xl my-4" >DEALS OF THE DAY</h1>
         </div>
-        <div className="grid grid-cols-5 gap-4 w-10/12 mt-6 mb-20 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 w-10/12 mt-6 mb-20 mx-auto">
         {deals.map(product => (
             <DealsCard key={product.id} brand={product.brand} image={product.image} disc={product.disc} item={product.item}/>
         ))}
@@ -30,7 +30,7 @@ export default class Main extends Component {
         <div className="w-10/12 mx-auto ">
         <h1 className="font-bold text-gray-700 text-4xl my-4" >BIGGEST DEALS ON TOP BRANDS</h1>
         </div>
-        <div className="grid grid-cols-5 gap-4 w-10/12 mt-6 mb-20 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5  gap-4 w-10/12 mt-6 mb-20 mx-auto">
         {bigbrands.map(product => (
             <ProductCard key={product.id} brand={product.brand} image={product.image} disc={product.disc}/>
         ))}
@@ -40,7 +40,7 @@ export default class Main extends Component {
         <div className="w-10/12 mx-auto ">
         <h1 className="font-bold text-gray-700 text-4xl my-4" >CATEGORIES TO BAG</h1>
         </div>
-        <div className="grid grid-cols-6 gap-4 w-10/12 mt-6 mb-20 mx-auto ">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6  gap-4 w-10/12 mt-6 mb-20 mx-auto ">
         {categories.map(category => (
             <CategoryCard key={category.id} name={category.name} image={category.image}/>
         ))}
