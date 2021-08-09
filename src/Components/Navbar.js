@@ -4,6 +4,7 @@ import NavElement from './NavElement';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHeart, faUser} from '@fortawesome/free-regular-svg-icons'
 import {faSearch, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -13,11 +14,12 @@ class Navbar extends Component {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="flex-shrink-0">
+                <Link to="/">
                 <img
                   className="h-10 w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14"
                   src={logo}
                   alt="Myntra"
-                />
+                /></Link>
               </div>
               <div className="hidden md:block">
                 <div className="ml-4 xl:ml-10 flex items-baseline space-x-2 xl:space-x-4">
@@ -52,10 +54,13 @@ class Navbar extends Component {
               <p className="text-xs font-bold">Wishlist</p>
               </div>
 
-              <div className="text-center font-medium">
+              <Link to="/cart">
+              <div className="text-center font-medium relative">
+              <span className="text-white text-xs rounded-full bg-pink-600 absolute -top-1 -right-1.5 " style={{height:"1rem", width:"1rem"}}>1</span>
               <FontAwesomeIcon icon={faShoppingBag} />
               <p className="text-xs font-bold">Bag</p>
               </div>
+              </Link>
 
             </div>
 
@@ -63,7 +68,12 @@ class Navbar extends Component {
               <FontAwesomeIcon icon={faSearch} />
               <FontAwesomeIcon icon={faUser} />
               <FontAwesomeIcon icon={faHeart} />
+              <Link to="/cart">
+              <div className="text-center font-medium relative">
+              <span className="text-white text-xs rounded-full bg-pink-600 absolute -top-1 -right-1.5 " style={{height:"1rem", width:"1rem"}}>1</span>
               <FontAwesomeIcon icon={faShoppingBag} />
+              </div>
+              </Link>
             </div>
             
             </div>

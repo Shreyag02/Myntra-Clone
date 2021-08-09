@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 
 var slides=[
     'https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/18/54f92461-1064-4c68-90cb-6af3ef196bf61626616397601-Main-Banner_western-wear_desktop.jpg',
