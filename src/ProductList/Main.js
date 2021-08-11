@@ -5,6 +5,7 @@ import ProductlistCard from '../Components/ProductlistCard'
 import Axios from "axios";
 import {FixedSizeGrid} from 'react-window'
 import { Link } from 'react-router-dom';
+import Filter from './Filter';
 export default class ProductList extends Component {
     state = {
         mydata:[],
@@ -26,7 +27,7 @@ export default class ProductList extends Component {
         const product = this.state.mydata[rowIndex+columnIndex] || {}
             return(
             <div style={style}>
-            <ProductlistCard key={product["SERIAL NO"]} image={product.IMAGE} brand={product.NAME} desc={product["DESCRIPTION & COLOR"]} price={product.PRICE}/>
+            <ProductlistCard key={product["SERIAL NO"]} id={product["SERIAL NO"]}  image={product.IMAGE} brand={product.NAME} desc={product["DESCRIPTION & COLOR"]} price={product.PRICE}/>
             </div>
             )
         };
@@ -43,8 +44,10 @@ export default class ProductList extends Component {
     return (
       <>
         <Navbar/>
+        <div className="w-11/12 m-auto">
+
         <div className=" border-b border-gray-300 ">
-            <div className="container mt-16 text-sm">
+            <div className="container text-sm">
             <ol className="list-reset pt-6 pb-1 pl-4 rounded flex ">
                 <li className="px-2"><Link to="/" className="no-underline text-indigo">Home</Link></li>
                 <li>/</li>
@@ -61,23 +64,37 @@ export default class ProductList extends Component {
             <div className="px-6 my-4 text-sm font-bold flex justify-between items-center">
                 <span>FILTERS</span>
             <div className="relative hidden lg:block">
-              <div className="absolute left-2 top-2 xl:left-4 font-weight-light text-gray-400"> 
-              SORTBY
-              </div>
-              <input type="text" className="bg-gray-100 focus:bg-white h-10 border w-64 xl:w-96 px-8 xl:px-12 py-4 z-0 focus:outline-none " placeholder=""/>
+              
+              {/* <input type="text" className="bg-gray-100 focus:bg-white h-10 border w-64 xl:w-96 px-8 xl:px-12 py-4 z-0 focus:outline-none " placeholder=""/> */}
+            <div class="dropdown inline-block relative">
+                <button class="border font-semibold py-2 px-4 border-gray-500 inline-flex items-center">
+                <div className="xl:left-4 font-light text-gray-400"> 
+                SORTBY: 
+                </div>
+                <span class="mx-2"> Best selling</span>
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                </button>
+                <ul class="dropdown-menu absolute hidden shadow-sm border border-gray-200 mt-1 z-10 bg-white font-light">
+                <li class=""><a class="rounded-t hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Best Selling</a></li>
+                <li class=""><a class="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Price low to high</a></li>
+                <li class=""><a class="rounded-b hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Price high to low</a></li>
+                </ul>
+            </div>
               </div>
             </div>
         </div>
-        
-        <div className="grid grid-cols-4">
+        {/* head section ends */}
+
+
+        <div className="grid grid-cols-5">
             {/* filter section */}
-        <div className="bg-blue-200 border">
-            fliter
+        <div className="border-r border-gray-300">
+            <Filter/>
         </div>
 
 
         {/* productlist */}
-        <div className="col-span-3 flex justify-center py-4 border-l border-t`">
+        <div className="col-span-4 flex justify-center py-4 border-l border-t`">
         {/* <div className="grid grid-cols-5 p-2" style={{border:"1px solid red"}}>
 
         {this.state.mydata.map(product => (
@@ -90,13 +107,15 @@ export default class ProductList extends Component {
         rowCount={this.state.mydata.length/5} 
         height={1000} 
         width={1300} 
-        rowHeight={500} 
-        columnWidth={260}>
+        rowHeight={450} 
+        columnWidth={255}>
             {myprod}
         </FixedSizeGrid>
 
         </div>
 
+        </div>
+        
         </div>
         <Footer/>
       </>

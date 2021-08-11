@@ -43,3 +43,9 @@
 .bigbrand:nth-of-type(even){
   background-color: rgba(243, 244, 246);
 }
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu{
+  width: -webkit-fill-available;
+}

@@ -37,7 +37,7 @@ class Navbar extends Component {
               <div className="absolute left-2 top-2 xl:left-4 font-weight-light text-gray-400"> 
               <FontAwesomeIcon icon={faSearch}/>
               </div>
-              <input type="text" className="bg-gray-100 focus:bg-white h-10 border rounded w-64 xl:w-96 px-8 xl:px-12 py-4 z-0 focus:outline-none focus:border-red" placeholder="Search for products,brands and more..."/>
+              <input type="text" className="bg-gray-100 focus:bg-white h-10 rounded w-64 xl:w-96 px-8 xl:px-12 py-4 z-0 border border-transparent focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-transparent" placeholder="Search for products,brands and more..."/>
               </div>
 
               <div className="text-center font-medium lg:hidden">
