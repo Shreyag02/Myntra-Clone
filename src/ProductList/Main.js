@@ -15,10 +15,10 @@ export default class ProductList extends Component {
         var config = {
             headers: {'Access-Control-Allow-Origin': '*'}
         };
-        Axios.get(`https://cors-anywhere.herokuapp.com/https://api.jsonbin.io/b/610ba3f2e1b0604017a6fbcc`,config)
+        // Axios.get(`https://cors-anywhere.herokuapp.com/https://api.jsonbin.io/b/610ba3f2e1b0604017a6fbcc`,config)
         // Axios.get(`https://cors-anywhere.herokuapp.com/https://jsonplaceholder.typicode.com/todos`)
         // https://cors-anywhere.herokuapp.com/corsdemo
-        // Axios.get(`https://jsonkeeper.com/b/S5P8`)
+        Axios.get(`https://jsonkeeper.com/b/S5P8`)
         .then(
             res => {
                 this.setState({mydata : res.data});
