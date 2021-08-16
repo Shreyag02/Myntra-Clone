@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from "react-redux";
+import store from "./Store";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Creating redux store
+// const store = configureStore()
+
+//Subscribe method gets called only when there are changes made.
+store.subscribe(() => {
+    console.log(store.getState())
+})
+
+console.log(store.getState())
+
 ReactDOM.render(
+
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+  </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -6,12 +6,11 @@ import ProductDesc from './ProductDesc/Main';
 import Cart from './Cart/Main';
 
 //redux
-import { Provider } from "react-redux";
-import store from "./Store";
+
 function App() {
   return (
     <>
-    <Provider store={store}>
+    
     <Router>
       <Switch>
         <Route exact path="/" component={Home}/>
@@ -21,7 +20,6 @@ function App() {
         
       </Switch>
     </Router>
-    </Provider>
     </>
   );
 }
