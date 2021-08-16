@@ -12,7 +12,12 @@ export default class ProductList extends Component {
         mydata:[],
     };
     componentDidMount(){
-        Axios.get(`https://api.jsonbin.io/b/610ba3f2e1b0604017a6fbcc`)
+        var config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        };
+        Axios.get(`https://cors-anywhere.herokuapp.com/https://api.jsonbin.io/b/610ba3f2e1b0604017a6fbcc`,config)
+        // Axios.get(`https://cors-anywhere.herokuapp.com/https://jsonplaceholder.typicode.com/todos`)
+        // https://cors-anywhere.herokuapp.com/corsdemo
         // Axios.get(`https://jsonkeeper.com/b/S5P8`)
         .then(
             res => {
@@ -27,9 +32,9 @@ export default class ProductList extends Component {
     
     render() {
         const myprod = ({rowIndex,columnIndex,style}) => {
-        // const product = this.state.mydata[rowIndex+columnIndex] || {}
-        ecomdata.sort((a,b) => (a.PRICE > b.PRICE) ? 1 : ((b.PRICE > a.PRICE) ? -1 : 0))
-        const product = ecomdata[rowIndex+columnIndex] || {}
+        const product = this.state.mydata[rowIndex+columnIndex] || {}
+        // ecomdata.sort((a,b) => (a.PRICE > b.PRICE) ? 1 : ((b.PRICE > a.PRICE) ? -1 : 0))
+        // const product = ecomdata[rowIndex+columnIndex] || {}
             return(
             <div style={style}>
             <ProductlistCard key={product["SERIAL NO"]} id={product["SERIAL NO"]}  image={product.IMAGE} brand={product.NAME} desc={product["DESCRIPTION & COLOR"]} price={product.PRICE}/>
@@ -114,8 +119,8 @@ export default class ProductList extends Component {
         
         <FixedSizeGrid 
         columnCount={count} 
-        // rowCount={this.state.mydata.length/5} 
-        rowCount={ecomdata.length}
+        rowCount={this.state.mydata.length/5} 
+        // rowCount={ecomdata.length}
         height={1000} 
         width={1300} 
         rowHeight={400} 
