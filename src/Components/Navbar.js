@@ -5,9 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHeart, faUser} from '@fortawesome/free-regular-svg-icons'
 import {faSearch, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+import store from '../Store'
+
 
 class Navbar extends Component {
   render() {
+    const state = store.getState();
     return (
         <nav className="sticky top-0 bg-white z-10 shadow-none">
         <div className="mx-auto px-4 md:px-6 lg:px-8 xl:px-12 mynav">
@@ -56,7 +60,7 @@ class Navbar extends Component {
 
               <Link to="/cart">
               <div className="text-center font-medium relative">
-              <span className="text-white text-xs rounded-full bg-pink-600 absolute -top-1 -right-1.5 " style={{height:"1rem", width:"1rem"}}>1</span>
+              <span className="text-white text-xs rounded-full bg-pink-600 absolute -top-1 -right-1.5 " style={{height:"1rem", width:"1rem"}}>{state.cartProducts.reduce((a,b)=> a +parseInt(b.qty),0)}</span>
               <FontAwesomeIcon icon={faShoppingBag} />
               <p className="text-xs font-bold">Bag</p>
               </div>
@@ -70,7 +74,7 @@ class Navbar extends Component {
               <FontAwesomeIcon icon={faHeart} />
               <Link to="/cart">
               <div className="text-center font-medium relative">
-              <span className="text-white text-xs rounded-full bg-pink-600 absolute -top-1 -right-1.5 " style={{height:"1rem", width:"1rem"}}>1</span>
+              <span className="text-white text-xs rounded-full bg-pink-600 absolute -top-1 -right-1.5 " style={{height:"1rem", width:"1rem"}}>{state.cartProducts.reduce((a,b)=> a +parseInt(b.qty),0)}</span>
               <FontAwesomeIcon icon={faShoppingBag} />
               </div>
               </Link>
@@ -95,4 +99,14 @@ class Navbar extends Component {
     )
   }
 }
-export default Navbar;
+// export default Navbar;
+
+const mapStateToProps = (state) => ({
+  
+  products: state.cartProducts,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

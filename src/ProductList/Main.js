@@ -6,19 +6,20 @@ import Axios from "axios";
 import {FixedSizeGrid} from 'react-window'
 import { Link } from 'react-router-dom';
 import Filter from './Filter';
-import ecomdata from "../Data/men-accessories.json"
+import ecomdata from "../Data/ecomdata.json"
 export default class ProductList extends Component {
     state = {
         mydata:[],
     };
     componentDidMount(){
-        var config = {
-            headers: {'Access-Control-Allow-Origin': '*'}
-        };
+        // var config = {
+        //     headers: {'Access-Control-Allow-Origin': '*'}
+        // };
         // Axios.get(`https://cors-anywhere.herokuapp.com/https://api.jsonbin.io/b/610ba3f2e1b0604017a6fbcc`,config)
         // Axios.get(`https://cors-anywhere.herokuapp.com/https://jsonplaceholder.typicode.com/todos`)
         // https://cors-anywhere.herokuapp.com/corsdemo
-        Axios.get(`https://jsonkeeper.com/b/S5P8`)
+        // Axios.get(`https://jsonkeeper.com/b/S5P8`)
+        Axios.get(`https://api.jsonbin.io/b/610ba3f2e1b0604017a6fbcc`)
         .then(
             res => {
                 this.setState({mydata : res.data});
@@ -32,17 +33,17 @@ export default class ProductList extends Component {
     
     render() {
         const myprod = ({rowIndex,columnIndex,style}) => {
-        const product = this.state.mydata[rowIndex+columnIndex] || {}
+        // const product = this.state.mydata[rowIndex+columnIndex] || {}
         // ecomdata.sort((a,b) => (a.PRICE > b.PRICE) ? 1 : ((b.PRICE > a.PRICE) ? -1 : 0))
-        // const product = ecomdata[rowIndex+columnIndex] || {}
+        const product = ecomdata[rowIndex+columnIndex] || {}
             return(
             <div style={style}>
-            <ProductlistCard key={product["SERIAL NO"]} id={product["SERIAL NO"]}  image={product.IMAGE} brand={product.NAME} desc={product["DESCRIPTION & COLOR"]} price={product.PRICE}/>
+            <ProductlistCard key={product["SERIAL NO"]} id={product["PRODUCT ID"]}  image={product.IMAGE} brand={product.NAME} desc={product["DESCRIPTION & COLOR"]} price={product.PRICE}/>
             </div>
             )
         };
 
-      console.log(this.state.mydata)
+    //   console.log(this.state.mydata)
       var count = 5;
        
       if (window.innerWidth <= 768) {
@@ -86,14 +87,9 @@ export default class ProductList extends Component {
                     <option value="Price low to high">Price low to high</option>
                     <option value="Price high to low">Price high to low</option>
                 </select>
-                {/* <span className="mx-2"> Best selling</span>
-                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg> */}
+                
                 </div>
-                {/* <ul className="dropdown-menu absolute hidden shadow-sm border border-gray-200 mt-1 z-10 bg-white font-light">
-                <li className=""><a className="rounded-t hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Best Selling</a></li>
-                <li className=""><a className="hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Price low to high</a></li>
-                <li className=""><a className="rounded-b hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Price high to low</a></li>
-                </ul> */}
+                
             </div>
               </div>
             </div>
@@ -119,8 +115,8 @@ export default class ProductList extends Component {
         
         <FixedSizeGrid 
         columnCount={count} 
-        rowCount={this.state.mydata.length/5} 
-        // rowCount={ecomdata.length}
+        // rowCount={this.state.mydata.length} 
+        rowCount={ecomdata.length/count}
         height={1000} 
         width={1300} 
         rowHeight={400} 
@@ -139,3 +135,25 @@ export default class ProductList extends Component {
   }
 }
 //objs.sort((a,b) => (a.PRICE > b.PRICE) ? 1 : ((b.PRICE > a.PRICE) ? -1 : 0))
+
+// {
+//     if (window.innerWidth <= 1440) {
+//         this.setState({count:4})
+//         // count = 4;
+//     }
+//     if (window.innerWidth <= 1024) {
+//         this.setState({count:4})
+
+//         // count = 3;
+//     }
+//       if (window.innerWidth <= 768) {
+//         this.setState({count:4})
+
+//         //   count = 2;
+//       }
+//       if (window.innerWidth <= 425) {
+//         this.setState({count:4})
+
+//         // count = 1;
+//     }
+//   }

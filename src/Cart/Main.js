@@ -1,16 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 //redux
 import { connect } from "react-redux";
-import { removeItem} from "../Actions/Inventory";
+import { addCount, decreaseCount, removeItem} from "../Actions/actions";
 import { faChevronRight, faTag} from '@fortawesome/free-solid-svg-icons';
 import {faHeart}from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Cart = ({ products, removeProduct}) => {
+const Cart = ({ products, removeProduct, decreaseProduct, increaseProduct}) => {
 
-  console.log("products from cart", products)
   return (
     <>
     <Navbar/>
@@ -31,8 +30,10 @@ const Cart = ({ products, removeProduct}) => {
     </div>
     <div className="mt-4"> 
     <div className="flex justify-between items-center font-bold my-4">
-    <div>My Shopping Bag ({products.length} items)</div>
-    <div>Total:₹100</div>
+
+    <div>My Shopping Bag ({products.reduce((a,b)=> a +parseInt(b.qty),0)} items)</div>
+    
+    <div>Total:₹{products.reduce((a,b)=> a +parseInt(b.price*b.qty),0)}</div>
     </div>
     {products.length ? <div className="grid">
 
@@ -45,13 +46,13 @@ const Cart = ({ products, removeProduct}) => {
           <div className="font-semibold text-lg mb-2 line-clamp-1">{product.brand}</div>
           <div className="font-light text-gray-500 text-xs  mb-3 line-clamp-1">{product.desc}</div>
           Qty:  
-          <span className="ml-3 input-group">
-            <button className="button-minus outline-none border border-gray-200 text-center w-8">-</button>
-            <input type="" step="1" max="" min="1" value={product.qty} name="quantity" className="outline-none border-t border-b border-gray-200 w-12 text-center"/>
-            <button className="button-plus outline-none border border-gray-200 w-8 text-center">+</button>
+          <span className="ml-3">
+            <button className="button-minus outline-none border border-gray-200 text-center w-8" onClick={() =>(product.qty===1)?removeProduct(product.id): decreaseProduct(product.id)}>-</button>
+            <div className="outline-none border-t border-b border-gray-200 w-12 text-center inline-block">{product.qty}</div>
+            <button className="button-plus outline-none border border-gray-200 w-8 text-center" onClick={() => increaseProduct(product.id)}>+</button>
           </span>
           </div>
-          <div className="font-bold text-md text-right">₹{product.price}</div>
+          <div className="font-bold text-md text-right">₹{product.price * product.qty}</div>
         </div>
         </>
         <>
@@ -97,7 +98,7 @@ const Cart = ({ products, removeProduct}) => {
       <div className="flex justify-between items-center my-4">
       <div className="font-semibold ">total MRP:</div>
       <div>
-        <button className="">₹100</button>
+        <button className="">₹{products.reduce((a,b)=> a +parseInt(b.price*b.qty),0)}</button>
       </div>
       </div>
 
@@ -122,6 +123,12 @@ const mapDispatchToProps = (dispatch) => ({
   removeProduct: (id) => {
     dispatch(removeItem(id));
   },
+  decreaseProduct: (id) => {
+    dispatch(decreaseCount(id));
+  },
+  increaseProduct: (id) => {
+    dispatch(addCount(id));
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
