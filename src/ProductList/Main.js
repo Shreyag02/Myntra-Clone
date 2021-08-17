@@ -35,7 +35,7 @@ export default class ProductList extends Component {
         const myprod = ({rowIndex,columnIndex,style}) => {
         // const product = this.state.mydata[rowIndex+columnIndex] || {}
         // ecomdata.sort((a,b) => (a.PRICE > b.PRICE) ? 1 : ((b.PRICE > a.PRICE) ? -1 : 0))
-        const product = ecomdata[rowIndex+columnIndex] || {}
+        const product = ecomdata[(rowIndex*count)+columnIndex] || {}
             return(
             <div style={style}>
             <ProductlistCard key={product["SERIAL NO"]} id={product["PRODUCT ID"]}  image={product.IMAGE} brand={product.NAME} desc={product["DESCRIPTION & COLOR"]} price={product.PRICE}/>
